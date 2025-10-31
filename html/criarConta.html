@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ShowTime • Criar conta</title>
+  <link rel="stylesheet" href="../css/criarConta.css" />
+</head>
+<body>
+  <main class="auth-page">
+    <section class="auth-card" role="region" aria-labelledby="titulo">
+      <!-- Cabeçalho com logo + título ao lado (igual ao login) -->
+      <header class="brand" aria-labelledby="titulo">
+        <img src="../img/Logo_nome_real.png" alt="ShowTime" class="brand__logo" />
+        <h1 id="titulo" class="brand__title">Criar conta</h1>
+      </header>
+
+      <p class="subtitle">Preencha seus dados para começar</p>
+
+      <form class="form" action="/usuario/registrar" method="POST" novalidate>
+        <label class="field">
+          <span class="field__label">Nome completo</span>
+          <input class="field__input" type="text" name="nome" placeholder="Seu nome" required />
+        </label>
+
+        <label class="field">
+          <span class="field__label">Email</span>
+          <input class="field__input" type="email" name="email" placeholder="seu@email.com" required />
+        </label>
+
+        <label class="field">
+          <span class="field__label">Senha</span>
+          <input class="field__input" type="password" name="senha" placeholder="Mínimo 8 caracteres" required />
+        </label>
+
+        <label class="field">
+          <span class="field__label">Confirmar senha</span>
+          <input class="field__input" type="password" name="confirmar_senha" placeholder="Digite novamente" required />
+        </label>
+
+        <button class="btn btn--primary" type="submit">Criar conta</button>
+      </form>
+
+      <div class="links">
+        <a class="link link--muted" href="/usuario/esqueci-senha">Esqueceu sua senha?</a>
+        <div class="links__row">
+          <span>Já tem conta?</span>
+          <a class="link" href="/usuario/login">Entrar</a>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
